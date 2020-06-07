@@ -13,17 +13,20 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <ImageView
-        android:src="@drawable/ic_person_black_24dp"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_gravity="center"/>
+        android:layout_width="match_parent"
+        android:layout_height="111dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/header" />
+
     <TextView
         android:id="@+id/txtFullname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingLeft="40dp"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="Quản Lí Chi Tiêu"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+        android:text="QUẢN LÝ QUỸ TIỀN"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20dp" />
 
 
 
