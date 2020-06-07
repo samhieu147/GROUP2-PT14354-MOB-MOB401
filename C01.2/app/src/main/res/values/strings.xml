@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name"></string>
+
+    <string name="mo">Mở</string>
+    <string name="dong">Đóng</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <array name="arr3">
+        <item>Tiền Mặt</item>
+        <item>Tiết Kiệm</item>
+        <item>Thẻ Tín Dụng</item>
+    </array>
+    <string name="thu">Tổng Thu</string>
+</resources>
