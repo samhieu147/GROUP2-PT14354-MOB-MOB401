@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:id="@+id/txtTaiKhoan"
+    android:textSize="20sp"
+    android:textStyle="bold|italic"
+    android:fontFamily="serif"
+    android:textColor="@color/fbutton_color_orange"
+    android:text="Lãi Ngân Hàng"
+    android:background="@android:color/white"
+    android:gravity="center_horizontal|center_vertical"
+    >
+</TextView>

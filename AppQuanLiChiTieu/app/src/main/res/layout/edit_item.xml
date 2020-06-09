@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="20dp">
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edtNameEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Xin mời nhập dữ liệu"
+            android:textColorHint="@android:color/darker_gray"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="24dp"
+            android:inputType="text"
+            app:met_baseColor="@android:color/darker_gray"
+            app:met_floatingLabel="highlight"
+            app:met_primaryColor="@android:color/darker_gray"
+            app:met_singleLineEllipsis="true"
+            android:paddingLeft="8dp"
+            />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2">
+            <info.hoang8f.widget.FButton
+                android:id="@+id/btnCancel"
+                android:text="Hủy"
+                android:textColor="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                app:fButtonColor="@color/fbutton_color_orange"
+                app:shadowColor="@android:color/black"
+                app:shadowHeight="5dp"
+                app:cornerRadius="5dp"
+                app:shadowEnabled="true"
+
+                />
+            <info.hoang8f.widget.FButton
+                android:id="@+id/btnEdit"
+                android:text="Đồng Ý"
+                android:textColor="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                app:fButtonColor="@color/fbutton_color_orange"
+                app:shadowColor="@android:color/black"
+                app:shadowHeight="5dp"
+                app:cornerRadius="5dp"
+                app:shadowEnabled="true"
+
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

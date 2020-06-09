@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/C01.2.iml" filepath="$PROJECT_DIR$/.idea/modules/C01.2.iml" group="C01.2" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/C01.2-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/C01.2-app.iml" group="C01.2/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/GROUP2-PT14354-MOB-MOB401-C01.2.iml" filepath="$PROJECT_DIR$/.idea/modules/GROUP2-PT14354-MOB-MOB401-C01.2.iml" group="C01.2" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="C01.2/app" />
+    </modules>
+  </component>
+</project>
