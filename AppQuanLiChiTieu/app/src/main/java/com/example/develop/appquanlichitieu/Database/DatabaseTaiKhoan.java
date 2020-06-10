@@ -57,6 +57,16 @@ public class DatabaseTaiKhoan {
         //Log.d("checkNao", String.valueOf(list));
         return list;
     }
+    public boolean deteleteItem(String id){
+
+        long check= database.delete(CreateDatabase.TB_TAIKHOAN,CreateDatabase.TB_TAIKHOAN_ID+"=?",new String[]{String.valueOf(id)});
+        if (check !=0){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 
     public boolean UpdateLoaiThu(TaiKhoan taiKhoan){
 
