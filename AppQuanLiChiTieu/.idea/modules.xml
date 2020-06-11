@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/AppQuanLiChiTieu.iml" filepath="$PROJECT_DIR$/.idea/modules/AppQuanLiChiTieu.iml" group="AppQuanLiChiTieu" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AppQuanLiChiTieu-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AppQuanLiChiTieu-app.iml" group="AppQuanLiChiTieu/app" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/C01.2.iml" filepath="$PROJECT_DIR$/.idea/modules/C01.2.iml" group="C01.2" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/GROUP2-PT14354-MOB-MOB401-AppQuanLiChiTieu.iml" filepath="$PROJECT_DIR$/.idea/modules/GROUP2-PT14354-MOB-MOB401-AppQuanLiChiTieu.iml" group="AppQuanLiChiTieu" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/GROUP2-PT14354-MOB-MOB401-AppQuanLiChiTieu-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/GROUP2-PT14354-MOB-MOB401-AppQuanLiChiTieu-app.iml" group="AppQuanLiChiTieu/app" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="C01.2/app" />
     </modules>
   </component>

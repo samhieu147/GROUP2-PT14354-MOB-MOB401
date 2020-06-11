@@ -13,8 +13,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-//import com.example.develop.appquanlichitieu.Adapter.PageAdapterChi;
 import com.example.develop.appquanlichitieu.R;
+
+//import com.example.develop.appquanlichitieu.Adapter.PageAdapterChi;
 
 
 public class ChiFragment extends Fragment {

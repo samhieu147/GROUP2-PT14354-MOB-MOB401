@@ -12,7 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-//import com.example.develop.appquanlichitieu.Adapter.PageAdapter;
+import com.example.develop.appquanlichitieu.Adapter.PageAdapter;
 import com.example.develop.appquanlichitieu.R;
 
 
@@ -20,7 +20,7 @@ public class ThuFragment extends Fragment {
     private ViewPager pager;
     private TabLayout tabLayout;
     FragmentManager fragmentManager;
-//    PageAdapter paperAdapter;
+    PageAdapter paperAdapter;
     private FragmentActivity myContext;
     @Nullable
     @Override
@@ -35,8 +35,11 @@ public class ThuFragment extends Fragment {
     private void addControl() {
 
         fragmentManager=myContext.getSupportFragmentManager();
+        paperAdapter=new PageAdapter(fragmentManager);
+        pager.setAdapter(paperAdapter);
         tabLayout.setupWithViewPager(pager);
         pager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        tabLayout.setTabsFromPagerAdapter(paperAdapter);
 
         pager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
