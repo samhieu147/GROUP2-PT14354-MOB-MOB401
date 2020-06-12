@@ -8,24 +8,27 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-//import com.example.develop.appquanlichitieu.Adapter.PageAdapter;
 import com.example.develop.appquanlichitieu.R;
 
+//import com.example.develop.appquanlichitieu.Adapter.PageAdapterChi;
 
-public class ThuFragment extends Fragment {
+
+public class ChiFragment extends Fragment {
     private ViewPager pager;
     private TabLayout tabLayout;
     FragmentManager fragmentManager;
-//    PageAdapter paperAdapter;
     private FragmentActivity myContext;
+    private int last_frag = 0;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view =inflater.inflate(R.layout.fragment_thu,container,false);
+        View view =inflater.inflate(R.layout.fragment_chi,container,false);
         pager=view.findViewById(R.id.view_pager);
         tabLayout=view.findViewById(R.id.tab_layout);
         addControl();
@@ -35,6 +38,7 @@ public class ThuFragment extends Fragment {
     private void addControl() {
 
         fragmentManager=myContext.getSupportFragmentManager();
+
         tabLayout.setupWithViewPager(pager);
         pager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 
@@ -46,28 +50,30 @@ public class ThuFragment extends Fragment {
 
             @Override
             public void onPageSelected(int position) {
-                if(position==0)
-                {
-                    pager.getAdapter().notifyDataSetChanged();
-                }
-            }
 
+                if(position==0){
+                    pager.getAdapter().notifyDataSetChanged();
+
+                }else {
+
+                }
+                Log.d("pos",position+"");
+            }
             @Override
             public void onPageScrollStateChanged(int state) {
 
             }
         });
+
+
+
     }
-
-
 
     @Override
     public void onAttach(Activity activity) {
         myContext= (FragmentActivity) activity;
         super.onAttach(activity);
     }
-    @Override
-    public void onResume() {
-        super.onResume();
-    }
+
+
 }

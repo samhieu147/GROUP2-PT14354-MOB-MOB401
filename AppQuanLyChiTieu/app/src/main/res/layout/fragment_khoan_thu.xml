@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <TextView
+        android:id="@+id/batloi"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_centerInParent="true"
+        android:padding="10dp"
+        android:visibility="invisible"
+        android:gravity="center"
+        android:text="Tài Khoản hoặc Loại Thu Của bạn hiện chưa có dữ liệu vui lòng Kiểm tra lại Thank you!"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/carview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="10dp">
+            <TextView
+                android:text="Tổng Thu: "
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tongthu"
+                android:textStyle="italic"
+                android:text="1000"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@id/carview"
+        android:id="@+id/recyclerview_khoanthu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+        <android.support.design.widget.FloatingActionButton
+
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/fabkhoanthu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:backgroundTint="@android:color/white"
+            app:srcCompat="@drawable/ic_playlist_add_black_24dp"
+            />
+</RelativeLayout>
+
