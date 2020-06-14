@@ -90,15 +90,16 @@ public class LoaiThuFragment extends Fragment {
     }
 
     private void AddNew() {
-//        loaiThu=new LoaiThu(edtName.getText().toString().trim());
         loaiThu=new LoaiThu(edtName.getText().toString());
-        long chekc=databaseLoaiThu.AddItem(loaiThu);
-        if(chekc>0&&edtName.length()>0){
 
-            LoadDataLoaiThu();
-            Toast.makeText(getContext(), "Thêm Thành Công !", Toast.LENGTH_SHORT).show();
+        if(edtName.length()<=0){
+
+            Toast.makeText(getContext(), "Thêm thất bại !", Toast.LENGTH_SHORT).show();
         }else {
-            Toast.makeText(getContext(), "Thêm Thất Bại !!", Toast.LENGTH_SHORT).show();
+            long check=databaseLoaiThu.AddItem(loaiThu);
+            if(check>0){
+            LoadDataLoaiThu();
+            Toast.makeText(getContext(), "Thêm thành công !!", Toast.LENGTH_SHORT).show();}
         }
     }
 
