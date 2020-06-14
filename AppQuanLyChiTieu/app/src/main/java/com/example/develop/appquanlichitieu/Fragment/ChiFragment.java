@@ -13,15 +13,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.develop.appquanlichitieu.Adapter.PageAdapterChi;
 import com.example.develop.appquanlichitieu.R;
-
-//import com.example.develop.appquanlichitieu.Adapter.PageAdapterChi;
 
 
 public class ChiFragment extends Fragment {
     private ViewPager pager;
     private TabLayout tabLayout;
     FragmentManager fragmentManager;
+    PageAdapterChi paperAdapter;
     private FragmentActivity myContext;
     private int last_frag = 0;
 
@@ -38,10 +38,12 @@ public class ChiFragment extends Fragment {
     private void addControl() {
 
         fragmentManager=myContext.getSupportFragmentManager();
+        paperAdapter=new PageAdapterChi(fragmentManager);
 
+        pager.setAdapter(paperAdapter);
         tabLayout.setupWithViewPager(pager);
         pager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-
+        tabLayout.setTabsFromPagerAdapter(paperAdapter);
         pager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
