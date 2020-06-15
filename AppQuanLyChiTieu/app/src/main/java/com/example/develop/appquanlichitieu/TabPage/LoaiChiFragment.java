@@ -12,10 +12,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.example.develop.appquanlichitieu.Database.DatabaseLoaiThu;
-import com.example.develop.appquanlichitieu.Model.LoaiThu;
+import com.example.develop.appquanlichitieu.Database.DatabaseLoaiChi;
+import com.example.develop.appquanlichitieu.Model.LoaiChi;
 import com.example.develop.appquanlichitieu.R;
-import com.example.develop.appquanlichitieu.ViewHolder.LoaiThuAdapter;
+import com.example.develop.appquanlichitieu.ViewHolder.LoaiChiAdapter;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
 import java.util.ArrayList;
@@ -24,33 +24,35 @@ import java.util.List;
 import info.hoang8f.widget.FButton;
 
 
-public class LoaiThuFragment extends Fragment {
-    RecyclerView recyclerView_LoaiThu;
+public class LoaiChiFragment extends Fragment {
+    RecyclerView recyclerView_LoaiChi;
 
     FloatingActionButton btnFab;
-    FButton btnAdd,btnHuy;
+    FButton btnAdd, btnHuy;
     MaterialEditText edtName;
-    LoaiThu loaiThu;
-    DatabaseLoaiThu databaseLoaiThu;
-    LoaiThuAdapter adapter;
-    List<LoaiThu> listdata;
 
+    DatabaseLoaiChi databaseLoaiChi;
+
+    List<LoaiChi> listdata;
+    LoaiChiAdapter adapter;
     RecyclerView.LayoutManager layoutManager;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View view=inflater.inflate(R.layout.fragment_loai_thu,container,false);
+        View view = inflater.inflate(R.layout.fragment_loai_chi, container, false);
+
         listdata=new ArrayList<>();
-        recyclerView_LoaiThu =view.findViewById(R.id.recyclerview_loaithu);
-        recyclerView_LoaiThu.setHasFixedSize(true);
+        recyclerView_LoaiChi =view.findViewById(R.id.recyclerview_loaichi);
+        recyclerView_LoaiChi.setHasFixedSize(true);
         layoutManager=new LinearLayoutManager(getContext());
-        recyclerView_LoaiThu.setLayoutManager(layoutManager);
+        recyclerView_LoaiChi.setLayoutManager(layoutManager);
         btnFab=view.findViewById(R.id.fab);
 
-        databaseLoaiThu=new DatabaseLoaiThu(getContext());
+        databaseLoaiChi=new DatabaseLoaiChi(getContext());
 
-        LoadDataLoaiThu();
+        LoadDataLoaiChi();
         btnFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -60,9 +62,7 @@ public class LoaiThuFragment extends Fragment {
         return view;
     }
 
-
     private void ShowDialogAdd() {
-
         final Dialog add_loaithu_layout=new Dialog(getContext());
         add_loaithu_layout.setTitle("Thêm Loại Thu ");
         add_loaithu_layout.setCancelable(false);
@@ -90,26 +90,24 @@ public class LoaiThuFragment extends Fragment {
     }
 
     private void AddNew() {
-        loaiThu=new LoaiThu(edtName.getText().toString());
+        LoaiChi loaiChi=new LoaiChi(edtName.getText().toString());
 
         if(edtName.length()<=0){
+            Toast.makeText(getContext(), "Thêm Thất bại Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
 
-            Toast.makeText(getContext(), "Thêm thất bại !", Toast.LENGTH_SHORT).show();
         }else {
-            long check=databaseLoaiThu.AddItem(loaiThu);
-            if(check>0){
-            LoadDataLoaiThu();
-            Toast.makeText(getContext(), "Thêm thành công !!", Toast.LENGTH_SHORT).show();}
+            long check = databaseLoaiChi.AddItem(loaiChi);
+            if (check > 0) {
+                Toast.makeText(getContext(), "Thành công", Toast.LENGTH_SHORT).show();
+                LoadDataLoaiChi();
+            }
         }
     }
 
-    private void LoadDataLoaiThu() {
-        listdata=databaseLoaiThu.getLoaiThu();
-        adapter=new LoaiThuAdapter(listdata,getContext());
-        recyclerView_LoaiThu.setAdapter(adapter);
+    private void LoadDataLoaiChi() {
+        listdata=databaseLoaiChi.getLoaiChi();
+        adapter=new LoaiChiAdapter(listdata,getContext());
+        recyclerView_LoaiChi.setAdapter(adapter);
         adapter.notifyDataSetChanged();
-
     }
-
-
 }

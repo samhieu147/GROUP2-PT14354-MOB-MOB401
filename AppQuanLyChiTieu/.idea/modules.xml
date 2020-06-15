@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/AppQuanLyChiTieu.iml" filepath="$PROJECT_DIR$/.idea/AppQuanLyChiTieu.iml" group="AppQuanLyChiTieu" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AppQuanLyChiTieu-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AppQuanLyChiTieu-app.iml" group="AppQuanLyChiTieu/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/GROUP2-PT14354-MOB-MOB401-AppQuanLyChiTieu.iml" filepath="$PROJECT_DIR$/.idea/modules/GROUP2-PT14354-MOB-MOB401-AppQuanLyChiTieu.iml" group="AppQuanLyChiTieu" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="AppQuanLyChiTieu/app" />
     </modules>
   </component>

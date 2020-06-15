@@ -4,14 +4,14 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.example.develop.appquanlichitieu.TabPage.KhoanThuFragment;
-import com.example.develop.appquanlichitieu.TabPage.LoaiThuFragment;
+import com.example.develop.appquanlichitieu.TabPage.KhoanChiFragment;
+import com.example.develop.appquanlichitieu.TabPage.LoaiChiFragment;
 
 
-public class PageAdapter extends FragmentStatePagerAdapter {
+public class PageAdapterChi extends FragmentStatePagerAdapter {
 
 
-    public PageAdapter(FragmentManager fragmentManager) {
+    public PageAdapterChi(FragmentManager fragmentManager) {
         super(fragmentManager);
     }
 
@@ -25,16 +25,20 @@ public class PageAdapter extends FragmentStatePagerAdapter {
         Fragment frag=null;
         switch (position){
             case 0:
-                frag= new KhoanThuFragment();
+                frag= new KhoanChiFragment();
+
                 break;
             case 1:
-                frag=new LoaiThuFragment();
+                frag=new LoaiChiFragment();
 
                 break;
 
+
         }
+
         return frag;
     }
+
 
     @Override
     public int getCount() {
@@ -47,10 +51,10 @@ public class PageAdapter extends FragmentStatePagerAdapter {
         String title = "";
         switch (position){
             case 0:
-                title = "Khoảng Thu";
+                title = "Khoảng Chi";
                 break;
             case 1:
-                title = "Loại Thu";
+                title = "Loại Chi";
                 break;
         }
         return title;
